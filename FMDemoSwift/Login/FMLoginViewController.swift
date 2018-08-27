@@ -77,6 +77,11 @@ class FMLoginViewController: FMBaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
+        
+        self.createUI()
+    }
+    
+    private func createUI() {
         view.addSubview(logoImageView)
         view.addSubview(userNameTF)
         view.addSubview(passwordTF)

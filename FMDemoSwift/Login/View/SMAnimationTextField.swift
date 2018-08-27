@@ -17,23 +17,25 @@ class SMAnimationTextField: UIView {
         let textField = UITextField()
         return textField
     }()
-    
+    private var _placeholder: String? = ""
     var placeholder: String {
         get {
-            return self.placeholder
+            return _placeholder!
         }
         
         set(value) {
             self.placeholderLabel.text = value
+            _placeholder = value
         }
     }
-    
+    private var _text: String? = ""
     var text: String? {
         get {
-            return textField.text
+            return _text!
         }
         set(value) {
             textField.text = value
+            _text = value
             if value != nil && value != "" {
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) {
                     self.moveUp()

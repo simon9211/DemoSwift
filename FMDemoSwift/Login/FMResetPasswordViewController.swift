@@ -88,7 +88,7 @@ class FMResetPasswordViewController: FMBaseViewController {
     override func updateViewConstraints() {
         
         emailField.snp.makeConstraints { (make) in
-            make.top.equalTo(naviView.snp.bottom).offset(80)
+            make.top.equalTo(naviView.snp.bottom).offset(50)
             make.left.equalTo(30)
             make.right.equalTo(-30)
             make.height.equalTo(50)

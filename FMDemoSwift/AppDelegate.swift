@@ -19,6 +19,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = FMLoginViewController()
         window?.makeKeyAndVisible()
+        
+        let bar: UINavigationBar = UINavigationBar.appearance()
+        bar.titleTextAttributes = [NSAttributedStringKey.font:UIFont.systemFont(ofSize: 20), NSAttributedStringKey.foregroundColor:UIColor.white]
+        bar.barTintColor = SMColor(r: 67, g: 64, b: 77, a: 1.0)
+        bar.isTranslucent = false
         return true
     }
 

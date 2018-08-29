@@ -59,6 +59,12 @@ class FMLoginViewController: FMBaseViewController {
                 if result {
                     SVProgressHUD.showSuccess(withStatus: "登录成功")
                     print("request successed")
+                    let mainVC: FMMainViewController = FMMainViewController()
+                    self.present(mainVC, animated: true, completion: {
+                        SVProgressHUD.dismiss()
+                    })
+                    
+                    
                 } else {
                     SVProgressHUD.showError(withStatus: "登录失败")
                 }

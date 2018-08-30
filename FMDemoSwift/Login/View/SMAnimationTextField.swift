@@ -71,10 +71,10 @@ class SMAnimationTextField: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.addSubview(self.textField)
+        addSubview(self.textField)
         textField.delegate = self
-        self.addSubview(self.placeholderLabel)
-        self.addSubview(self.lineView)
+        addSubview(self.placeholderLabel)
+        addSubview(self.lineView)
         halfHeight = frame.height / 2.0
     }
     

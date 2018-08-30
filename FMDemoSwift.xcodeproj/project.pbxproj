@@ -22,6 +22,8 @@
 		DA82B90D21339017002C4C26 /* FMConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA82B90C21339017002C4C26 /* FMConst.swift */; };
 		DA82B90F2133A392002C4C26 /* FMResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA82B90E2133A392002C4C26 /* FMResetPasswordViewController.swift */; };
 		DA82B9122134EAC8002C4C26 /* FMMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA82B9112134EAC8002C4C26 /* FMMainViewController.swift */; };
+		DA82B91521369D23002C4C26 /* FMHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA82B91421369D23002C4C26 /* FMHomeViewController.swift */; };
+		DA82B91821369DFD002C4C26 /* FMHomeItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA82B91721369DFD002C4C26 /* FMHomeItemCell.swift */; };
 		EBC8CBCE6A10E5986BC4F7B3 /* Pods_FMDemoSwiftTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DB3665C681A1BCB24C08441 /* Pods_FMDemoSwiftTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +62,8 @@
 		DA82B90C21339017002C4C26 /* FMConst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FMConst.swift; sourceTree = "<group>"; };
 		DA82B90E2133A392002C4C26 /* FMResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FMResetPasswordViewController.swift; sourceTree = "<group>"; };
 		DA82B9112134EAC8002C4C26 /* FMMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FMMainViewController.swift; sourceTree = "<group>"; };
+		DA82B91421369D23002C4C26 /* FMHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FMHomeViewController.swift; sourceTree = "<group>"; };
+		DA82B91721369DFD002C4C26 /* FMHomeItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FMHomeItemCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,8 +200,18 @@
 		DA82B91321369CED002C4C26 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				DA82B91621369DDB002C4C26 /* View */,
+				DA82B91421369D23002C4C26 /* FMHomeViewController.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		DA82B91621369DDB002C4C26 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DA82B91721369DFD002C4C26 /* FMHomeItemCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -379,11 +393,13 @@
 				DA82B90F2133A392002C4C26 /* FMResetPasswordViewController.swift in Sources */,
 				DA82B908212E9752002C4C26 /* UIView+Extension.swift in Sources */,
 				DA82B90D21339017002C4C26 /* FMConst.swift in Sources */,
+				DA82B91521369D23002C4C26 /* FMHomeViewController.swift in Sources */,
 				DA82B900212E90C4002C4C26 /* FMBaseViewController.swift in Sources */,
 				DA82B903212E9132002C4C26 /* FMLoginViewController.swift in Sources */,
 				DA82B8E1212E8FDD002C4C26 /* ViewController.swift in Sources */,
 				DA82B906212E9739002C4C26 /* SMConst.swift in Sources */,
 				DA82B9122134EAC8002C4C26 /* FMMainViewController.swift in Sources */,
+				DA82B91821369DFD002C4C26 /* FMHomeItemCell.swift in Sources */,
 				DA82B8DF212E8FDD002C4C26 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

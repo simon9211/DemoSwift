@@ -64,7 +64,7 @@ class FMResetPasswordViewController: FMBaseViewController {
         super.viewDidLoad()
         view.backgroundColor = .white
     
-        self.createUI()
+        createUI()
     }
     
     private func createUI() {

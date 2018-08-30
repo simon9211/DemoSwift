@@ -27,29 +27,29 @@ class FMMainViewController: UITabBarController {
         
         let childVCs: Array<Dictionary<String, String>> = [
             [
-                "vc":"UIViewController",
+                "vc":"FMHomeViewController",
                 "title":"首页",
                 "image":"home",
                 "selectImage":"home_selected"
-            ],
-            [
-                "vc":"UIViewController",
-                "title":"货流",
-                "image":"store",
-                "selectImage":"store_selected"
-            ],
-            [
-                "vc":"UIViewController",
-                "title":"会员",
-                "image":"member",
-                "selectImage":"member_selected"
-            ],
-            [
-                "vc":"UIViewController",
-                "title":"功能中心",
-                "image":"functionalCenter",
-                "selectImage":"functionalCenter_selected"
             ]
+//            ,[
+//                "vc":"UIViewController",
+//                "title":"货流",
+//                "image":"store",
+//                "selectImage":"store_selected"
+//            ],
+//            [
+//                "vc":"UIViewController",
+//                "title":"会员",
+//                "image":"member",
+//                "selectImage":"member_selected"
+//            ],
+//            [
+//                "vc":"UIViewController",
+//                "title":"功能中心",
+//                "image":"functionalCenter",
+//                "selectImage":"functionalCenter_selected"
+//            ]
         ]
         
         for item in childVCs {
@@ -60,16 +60,17 @@ class FMMainViewController: UITabBarController {
         // Do any additional setup after loading the view.
     }
     
-    
-    
     func setupChildVC(vcstr: String, title: String, image: String, selectImage: String) {
-        let vcClass = NSClassFromString(vcstr) as! UIViewController.Type
+        guard let nsp = Bundle.main.infoDictionary!["CFBundleExecutable"] as? String else {
+            return
+        }
+        let vcClass = NSClassFromString(nsp + "." + vcstr) as! UIViewController.Type
         let vc = vcClass.init()
         
         vc.title = title
         vc.tabBarItem.image = UIImage(named: image)?.withRenderingMode(.alwaysOriginal)
         vc.tabBarItem.selectedImage = UIImage(named: selectImage)?.withRenderingMode(.alwaysOriginal)
-        self.addChildViewController(UINavigationController(rootViewController: vc))
+        addChildViewController(UINavigationController(rootViewController: vc))
     }
 
     override func didReceiveMemoryWarning() {
